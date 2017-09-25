@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box Model 101</title>
+	<style type="text/css">
+		/*
+		*{
+			box-sizing: border-box;
+		}
+		*/
+		.thumbnail{
+			background-color: #006FFF;
+			height:200px;
+			width:200px;
+		}
+
+		.border-thumb{
+			border-width: 10px;
+			border-style: solid;
+			border-color: red;
+			/*short hand*/
+			border: 10px solid lightseagreen;
+			border-bottom: 10px solid limegreen;
+		}
+		.padded{
+			padding: 10px;
+			padding-left: 10px;
+			padding-right: 5px;
+			padding-top: 20px;
+			padding-bottom: 30px;
+			/*shorthand, if 2 values first represents top/bottom second represents left/right*/
+			padding:40px 10px;
+			/*4 values*/
+			padding:20px 20px 20px 20px;
+			text-align: justify;
+
+		}
+
+		.space-around{
+			margin:20px;
+		}
+
+		.stack-row{
+			/* floating = stack as many as i can to the left or right as long as i have a defined width*/
+			float: left;
+		}
+		#special-div{
+			width:400px;
+			height: 300px;
+			border:5px solid #FF0000;
+			float: right;
+			padding: 10px 20px;
+			margin-top:50px;
+			background-color: rgba(255,100,0,.5);
+		}
+</style>
+</head>
+<body>
+	<div class="thumbnail stack-row" ></div>
+	<div class="thumbnail border-thumb stack-row"></div>
+	<div class="thumbnail padded stack-row">
+	Aenean elit odio, posuere quis dolor ac, condimentum mattis purus. Suspendisse scelerisque sodales velit eget rhoncus. Suspendisse bibendum tellus leo, ut ullamcorper orci mollis a. Proin et tempor nisi. Suspendisse non hendrerit diam, et vestibulum sapien. Aenean id diam vitae nibh vestibulum cursus a vulputate velit.
+	</div>
+	<div class="thumbnail padded space-around stack-row">
+	Aenean elit odio, posuere quis dolor ac, condimentum mattis purus. Suspendisse scelerisque sodales velit eget rhoncus. Suspendisse bibendum tellus leo, ut ullamcorper orci mollis a. Proin et tempor nisi. Suspendisse non hendrerit diam, et vestibulum sapien. Aenean id diam vitae nibh vestibulum cursus a vulputate velit.
+	</div>
+	<div id="special-div"></div>
+</body>
+</html>

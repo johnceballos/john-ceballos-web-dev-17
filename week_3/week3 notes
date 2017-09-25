@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box Model 101</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<div class="thumbnail"></div>
+	<div class="thumbnail"></div>
+	<div class="thumbnail"></div>
+
+</body>
+</html>

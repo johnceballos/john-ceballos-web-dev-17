@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Layount 1 header-footer-sidebar using pixels</title>
+	<style type="text/css">
+		div,header,footer,main,article,section,aside {
+			background-color: rgba(0,0,100,.2);
+			min-height: 100px;
+		}
+		div.wrapper{
+			width:900px;
+			/*center div with margin 0 auto*/
+			margin: 0 auto;
+		}
+		article {
+			width:560px;
+			float: left;
+			margin:10px;
+			padding: 10px;
+
+		}
+		aside {
+			width:260px;
+			float: left;
+			min-height: 600px;
+			margin:10px;
+			padding: 10px;
+		}
+		.clear {
+			clear:both;
+			height:0;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		a header element pretend im in the main nav...
+	</header>
+	<main>
+		<h1>main content section, heading elements display block</h1>
+		<article>
+			<h2>an article with 3 sections</h2>
+			<section>
+				<h3>section1</h3>
+			</section>
+			<section>
+				<h3>section2</h3>
+			</section>
+			<section>
+				<h3>section3</h3>
+			</section>
+		</article>
+		<aside>
+			<h2>sidebar</h2>
+		</aside>
+		<br class="clear">
+	</main>
+	<footer>
+		<h3>some footer text</h3>
+	</footer>
+</div>
+</body>
+</html>
