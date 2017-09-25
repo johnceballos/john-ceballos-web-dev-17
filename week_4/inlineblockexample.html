@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inline Block</title>
+	<style type="text/css">
+		* {
+			margin:0;
+			padding:0;
+		}
+		main, article {
+			background-color: rgba(0,0,255,.2)
+		}
+		main {
+			width: 900px;
+			margin: 0 auto;
+			/*method one to remove margin from inline block, zero out font size in wrapper div and then re-define in the children elements*/
+			/*font-size: 0px;*/
+		}
+		article{
+			width:300px;
+			display:inline-block;
+			/*font-size: 16px;*/
+			/*method 2 is removing letter distance with negative margins*/
+			margin-right: -4px;
+			border: 2px solid blue;
+			/*width: 296px ;*/
+			box-sizing: border-box;
+			/*margin: 10px;*/
+			padding: 10px;
+			width: 280px;
+			margin:10px 8px;
+		}
+	</style>
+</head>
+<body>
+<main>
+	<article>1</article>
+	<article>2</article>
+	<article>3</article>
+</main>
+</body>
+</html>
