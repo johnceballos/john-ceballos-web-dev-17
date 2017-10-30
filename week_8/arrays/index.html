@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays 101</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August','Sepember', 'October', 'November', 'December'];
+		console.log(months.length);
+
+		var lastMonth = months.pop();
+		// console.log(months);
+		// console.log(lastMonth);
+
+		// months.push('December');
+		// console.log(months);
+
+		// console.log(months[(6)-1]);
+
+		// for (var i = 0; i < months.length; i++) {
+		// 	console.log(i + ' : ' +months[i]);
+		// }
+
+		// for(var i=months.length-1;i>=0;i--){
+		// 	console.log(months[i]);
+		// 	var dm = months.pop();
+		// 	console.log('Deleted: '+ dm+ ' new array length is ' + months.length);
+		// }
+
+		function randomNumber(n) {
+			var rn = Math.round(n*Math.random())
+			return rn;
+		}
+		var randomMonth = months[randomNumber(months.length)];
+		console.log(randomMonth)
+	</script>
+
+</body>
+</html>

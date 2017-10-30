@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math and Stuff</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//INTEGER DATA TYPES
+		var x = 15;
+		var y = 35;
+		// console.log(x+y);
+		// console.log(x-y);
+		// console.log(x*y);
+		// console.log(x/y);
+
+		// console.log(y%x);
+		// for(var i=0;i<10;i++){
+		// 	if(i%2===0){
+		// 		console.log(i);
+		// 	}else{
+		// 		alert(i);
+		// 	}
+		// }
+
+		// console.log(x);
+		// x++;
+		// console.log(x);
+		// x--;
+		// console.log(x);
+
+		// console.log(y);
+		// y+=5;
+		// console.log(y);
+		// y-=5;
+		// console.log(y);
+		
+		// var z=2.25;
+		// var zf=Math.floor(z);
+		// console.log(zf);
+		// var zc=Math.ceil(z);
+		// console.log(zc);
+
+		// var zr=Math.round(z);
+		// console.log(zr);
+
+		// console.log(Math.random());
+		// var yn = Math.round(Math.random());
+		// console.log(yn);
+		// if(yn===0){
+		// 	alert('heads');
+		// }else{
+		// 	alert('tails');
+		// }
+
+		function randomNumber(n) {
+			var rn = Math.round(n*Math.random())
+			console.log(rn);
+		}
+		randomNumber(234);
+
+		function randNumRange(min,max){
+			var rn = Math.round(Math.random()*(max-min) + min)
+			return rn;
+		}
+		console.log (randNumRange(34,77));
+
+	</script>
+
+</body>
+</html>

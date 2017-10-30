@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visual</title>
+	<script src= "https://use.fontawesome.com/a6166024b9.js"></script>
+	<link href= "https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<link rel= "shortcut icon" href="favicon.ic"/>
+	<link rel="stylesheet" type="text/css" href="css/visual.css">
+	
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<span style="cursor:pointer"><i id="myBtn" class="fa fa-bars fa-3x" aria-hidden="true"></i></span><br>
+		</header>
+		<img class="visualTitle" src="visual.png">
+		<main>
+			
+			<article>
+				<section id="photos">
+				  <img src="images/platinum.jpg">
+				  <img src="images/me6.jpg">
+				  <img src="images/r4.jpg">
+				  <img src="images/surely.jpg">
+				  <img src="images/me7.jpg">
+				  <img src="images/r6.jpg">
+				  <img src="images/level2.jpg">
+				  <img src="images/me5.jpg">
+				  <img src="images/5_oceans.jpg">
+				  <img src="images/r2.jpg">
+				  <img src="images/me3.jpg">
+				  <img src="images/star.jpg">
+				  <img src="images/r3.jpg">
+				  <img src="images/me2.jpg">
+				  <img src="images/coins.png">
+				  <img src="images/r5.jpg">
+				  <img src="images/me4.jpg">
+				  <img src="images/level1.jpg">
+				  <img src="images/me1.jpg">
+				  
+				</section>
+			</article>
+		</main>
+		<footer>
+			<p>
+				<a href="https://www.instagram.com/johnny_swunk/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="https://soundcloud.com/johnny-swunk"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+				<a href="https://www.paypal.me/johnceb/1"><i class="fa fa-paypal" aria-hidden="true"></i></a>
+			</p>
+		</footer>
+
+		<div id="myModal" class="modal">
+
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <ul class="menu">				
+				<img class="home" src="menu_pics/home.png">
+				<img class="audio" src="menu_pics/audio.png">
+				<img class="visual" src="menu_pics/visual.png">
+				<img class="contact" src="menu_pics/contact.png">
+				<li><a class="home"  href="../home.html"></a></li>
+				<li><a class="audio" href="../audio/audio.html"></a></li>
+				<li><a class="visual" class="active" href="visual.html"></a></li>
+				<li><a class="contact" href="../contact/contact.html"></a></li>
+			</ul>
+		  </div>
+		</div>
+
+
+		<script >
+			var modal = document.getElementById('myModal');
+			var btn = document.getElementById("myBtn");
+			var span = document.getElementsByClassName("close")[0];
+			btn.onclick = function() {
+			    modal.style.display = "block";
+			}
+			span.onclick = function() {
+			    modal.style.display = "none";
+			}
+			window.onclick = function(event) {
+			    if (event.target == modal) {
+			        modal.style.display = "none";
+			    }
+			}
+		</script>
+	</div>
+</body>
+</html>

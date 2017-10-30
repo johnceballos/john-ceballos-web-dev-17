@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adding the DOM</title>
+</head>
+<body>
+	<button id="singleBTN">Add a single p function</button>
+	<button id= "multiBTN">Add multiple paragraphs with parameter</button>
+	<div id="content"></div>
+
+	<script type="text/javascript">
+		var content;
+
+		document.addEventListener('DOMContentLoaded', function(e){
+			content = document.getElementById('content');
+
+			document.getElementById('singleBTN').addEventListener('click', addSingleP)
+			document.getElementById('multiBTN').addEventListener('click', addMultiP)
+		});
+		//declare global variables
+		var content;
+		content = document.getElementById('content');
+		function addSingleP(){
+			//add a single paragraph tag via a string and inner html
+			content.innerHTML += '<p>this is a single paragraph tag added the bad way!</p>'
+
+		}
+		function addMultiP(){
+			//proper dynamic DOM creation way
+			for(var i = 0;i < 8;i++){
+				var p = document.createElement('P');
+				var text = document.createTextNode('This is paragraph number: ' + i);
+
+				p.appendChild(text);
+
+				content.appendChild(p);
+			}
+		}
+	</script>
+</body>
+</html>
