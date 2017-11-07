@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple markers</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+    	var map;
+    	var lat=0;
+    	var lon=0;
+    	var myLatLon= {};
+
+    	function getLocation(){
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(setPosition);
+			}else{
+				alert('geolocation is not supported by your browser')
+			}
+		}
+		function setPosition(position){
+			lat = position.coords.latitude;
+			lon = position.coords.longitude;
+			myLatLon.lat = lat;
+			myLatLon.lon = lon;
+			initMap();
+		}
+  		function initMap(){
+  			map = new google.maps.Map(document.getElementById('map'), {
+  				center: {
+  					lat: lat,
+  					lng: lon
+  				},
+  				zoom:15
+  			});
+  			var marker = new google.maps.Marker({
+  				position: myLatLon,
+  				map: map,
+  				title: 'creepy message'
+  			});
+  		}
+      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_CODE_HEREcallback=getLocation">
+    </script>
+  </body>
+</html>
