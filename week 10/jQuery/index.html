@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	
+</head>
+<body>
+	<div id="myid">div we are going to select with jquery selector</div>
+	<p class="goat">Paragraph</p>
+	<p class="goat">Paragraph</p>
+	<p class="goat">Paragraph</p>
+	<p class="goat">Paragraph</p>
+	
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+
+
+
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+	  crossorigin="anonymous">
+	</script>
+
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			//load functions go here
+
+		});
+
+
+		$(document).ready(function () {
+			//jquery version of that^
+			//get element by id plainjs
+			document.getElementById('myid')
+			$('#myid').click(function(){
+				//this target the thing that was clicked here
+				$(this).html('You Clicked Me!');
+			});
+
+			//document.getElementsByTagName('P') [injava] = $(p) [injquery]
+			console.log($('p'));
+			//document.getElementsByClassName('goat');
+			console.log($('.goat'));
+			//this query selector grabs the first instance of (?)
+			//document.querySelector('li');
+			console.log($('li:first'));
+		});	
+	</script>
+</body>
+</html>

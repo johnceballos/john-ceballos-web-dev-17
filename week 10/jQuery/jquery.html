@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello, world!</h1>
+      <p id="mouseMe">This is a pargraph with mouse enter and mouse leave events attached in jquery</p>
+      <button class="btn btn-default" id="dblClickMe">
+        DOUBLE CLICK ME
+      </button>
+
+      <hr>
+      <button class="btn btn-danger" id="hideMe">hide </button>
+      <button class="btn btn-success" id="showMe">show </button>
+      <button class="btn btn-warning" id="toggle">toggle hide show</button>
+      <div class="card">
+        This is a div that will hide and show. we are going ot use the selector
+        <code>
+          $(.well:first)
+        </code>
+        as our selector
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        //mouse event
+        $('#mouseMe').on({
+          mouseenter: function () {
+            console.log("mouse entered the paragraph!");
+          },
+
+          mouseleave: function () {
+            console.log("mouse left me :( ");
+          }
+        });
+        $('#dblClickMe').dblclick(function(){
+            alert("double click!");
+        });
+
+        $('hideMe').click(function(){
+          $('card:first').hide();
+        });
+        $('showMe').click(function(){
+          $('card:first').show();
+        });
+        $('toggle').click(function(){
+          $('card:first').toggle();
+        });
+      });
+    </script>
+  </body>
+</html>
