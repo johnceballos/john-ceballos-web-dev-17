@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="gallery" id="gallery">
+			<ol>
+				<li data-thumb="top">top</li>
+				<li data-thumb="bottom">bottom</li>
+				<li data-thumb="left">left</li>
+				<li data-thumb="right">right</li>
+			</ol>
+			<div class="figure" id="figure">
+				<img class="top" src="http://via.placeholder.com/350x350?text=top">
+				<img class="bottom" src="http://via.placeholder.com/350x350?text=bottom">
+				<img class="left" src="http://via.placeholder.com/350x350?text=left">
+				<img class="right" src="http://via.placeholder.com/350x350?text=right">
+			</div>
+		</div>
+	</div>
+
+	<div class="aspect ratio">
+		<div class="content">
+			
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var gallery, figure, thumbs;
+		document.addEventListener('DOMContentLoaded',function (){
+			gallery = document.getEmelentById('gallery');
+			figure = document.getEmelentById('figure');
+			thumbs = document.getEmelentsByTagName('LI');
+
+			for(var i=0; i<thumbs.length; i++){
+				thumbs.[i].addEventListener('click', function(e){
+					var el = e.target;
+					console.log(el.dataset.thumb);
+					console.log(figure.classList);
+					figure.classList = ['figure'];
+					figure.classList.add(el.dataset.thumb);
+				});
+			}
+		});
+
+
+	</script>
+
+</body>
+</html>
